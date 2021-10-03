@@ -1,3 +1,7 @@
 .article-item {
     text-align: left;
 }
+
+.article-item .show-hide-btn {
+    margin: 5px;
+}
