@@ -1,7 +1,7 @@
 export default [
     {
         "id": "1",
-        "auhor": "Ray Bradbury",
+        "author": "Ray Bradbury",
         "title": "Fahrenheit 451"
     },
     {

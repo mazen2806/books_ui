@@ -15,7 +15,7 @@ class BookItem extends Component {
 
   render() {
     const {book} = this.props;
-    const body = this.state.isOpen && <section>{book.title}</section>;
+    const body = this.state.isOpen && <section>{book.author}</section>;
     return (
       <div className="book-item">
         <h4>{book.title}
