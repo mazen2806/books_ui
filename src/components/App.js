@@ -1,6 +1,6 @@
 import './App.css';
-import articles from '../fixtures/articles';
-import ArticleList from '../components/article-list/ArticleList';
+import books from '../fixtures/books';
+import BookList from '../components/book-list/BookList';
 import { Component } from 'react';
 
 class App extends Component {
@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="article-list">
-          <ArticleList articles={articles} />
+          <BookList books={books} />
         </div>
       </div>
     );

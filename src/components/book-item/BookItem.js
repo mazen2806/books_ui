@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import './Article.css';
+import './BookItem.css';
 
 
-class Article extends Component {
+class BookItem extends Component {
   state = {
     isOpen: true
   };
@@ -14,19 +14,19 @@ class Article extends Component {
   }
 
   render() {
-    const {article} = this.props;
-    const body = this.state.isOpen && <section>{article.text}</section>;
+    const {book} = this.props;
+    const body = this.state.isOpen && <section>{book.title}</section>;
     return (
-      <div className="article-item">
-        <h2>{article.title}
+      <div className="book-item">
+        <h4>{book.title}
           <button onClick={this.handleClick} className="show-hide-btn">
             {this.state.isOpen ? 'Show' : 'Hide'}
           </button>
-        </h2> 
+        </h4> 
         {body}
       </div>
     );
   }
 }
   
-  export default Article;
+export default BookItem;
