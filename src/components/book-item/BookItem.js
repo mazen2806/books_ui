@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import './BookItem.css';
+
 
 
 class BookItem extends Component {
@@ -18,19 +20,21 @@ class BookItem extends Component {
     const body = this.state.isOpen && <section className="card-text">{book.author}</section>;
 
     return (
-      <div className="book-item card">
-        <div className="card-header">
-          <h4>
-            {book.title}
+        <div className="book-item card">
+          <div className="card-header">
+            <Link to="/about">
+              <h4>
+                {book.title}
+              </h4>
+            </Link>
             <button onClick={this.handleClick} className="btn btn-primary ">
-              {this.state.isOpen ? 'Show' : 'Hide'}
+              {this.state.isOpen ? 'Hide' : 'Show'}
             </button>
-          </h4>
+          </div>
+          <div className="card-body">
+            {body}
+          </div> 
         </div>
-        <div className="card-body">
-          {body}
-        </div> 
-      </div>
     );
   }
 }

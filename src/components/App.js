@@ -1,17 +1,23 @@
-import './App.css';
-import books from '../fixtures/books';
-import BookList from '../components/book-list/BookList';
+import { Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+
+import './App.css';
+import BookList from '../components/book-list/BookList';
+import About from '../components/about/About';
 
 class App extends Component {
   render() {
     return (
-      <div className="container" >
-        <div className="book-list">
-          <BookList books={books} />
-        </div>
-      </div>
+      <>
+        <Suspense fallback={<div className="container">Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<BookList />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </Suspense>
+      </>
     );
   }
 }
