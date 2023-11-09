@@ -33,4 +33,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `docker build . -t books_ui`
 
 ## Run docker container
-### `docker run  -p 3000:3000 books_ui:latest`
+### `docker run  -d -p 3000:3000 books_ui:latest`
